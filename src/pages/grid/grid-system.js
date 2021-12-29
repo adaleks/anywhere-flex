@@ -1,5 +1,5 @@
 import AbstractView from '../AbstractView.js';
-import gridsystemPage from './gridsystem.html';
+import gridsystemPage from './grid-system.html';
 
 export default class extends AbstractView {
     constructor(params) {

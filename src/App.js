@@ -6,9 +6,14 @@ import '@/styles/style.scss';
 // importof scripts
 import Prism from 'prismjs';
 import pageNotFound from './pages/404.js';
-import setup from './pages/setup/setup.js';
-import gridsystem from './pages/gridsystem/gridsystem.js';
-import theming from './pages/theming/theming.js';
+import setup from './pages/general/setup.js';
+import gridsystem from './pages/grid/grid-system.js';
+import theming from './pages/general/theming.js';
+import display from './pages/layout/display.js';
+import overflow from './pages/layout/overflow.js';
+import position from './pages/layout/position.js';
+import toprightbottomleft from './pages/layout/toprightbottomleft.js';
+import zindex from './pages/layout/zindex.js';
 
 const pathToRegex = (path) =>
     new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
@@ -74,6 +79,26 @@ const router = () => {
             path: '/gridsystem',
             view: gridsystem,
         },
+        {
+            path: '/display',
+            view: display,
+        },
+        {
+            path: '/overflow',
+            view: overflow,
+        },
+        {
+            path: '/position',
+            view: position,
+        },
+        {
+            path: '/toprightbottomleft',
+            view: toprightbottomleft,
+        },
+        {
+            path: '/zindex',
+            view: zindex,
+        },
     ];
 
     // Test each route for potential match
@@ -108,6 +133,7 @@ const router = () => {
 
     setTimeout(async () => {
         document.querySelector('#root').innerHTML = await view.getHtml();
+        window.scrollTo({ top: 0 });
         view.script();
         hideMenu();
         if (Prism) {
@@ -130,6 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.parentNode.classList.add('active-menuitem');
         }
     });
+
+    // const logoImage = document.createElement('img');
+    // logoImage.src = '/assets/logo.png';
+    // const logos = document.querySelectorAll('.logo');
+    // [].forEach.call(logos, function (logo) {
+    //     // do whatever
+    //     logo.querySelector('div').prepend(logoImage);
+    // });
 
     // let menuButton = document.querySelector('.menu-button');
     // menuButton.onclick = function () {
