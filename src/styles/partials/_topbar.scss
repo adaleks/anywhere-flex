@@ -57,6 +57,10 @@
                 font-size: 30px;
                 font-weight: 700;
 
+                img {
+                    width: 50px;
+                }
+
                 span {
                     color: var(--primary-color);
                     font-size: 38px;
@@ -290,6 +294,10 @@
                     z-index: 1;
                     font-size: 20px;
                     font-weight: 700;
+
+                    img {
+                        width: 50px;
+                    }
 
                     span {
                         color: var(--primary-color);
