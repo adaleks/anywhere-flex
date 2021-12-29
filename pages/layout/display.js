@@ -1,0 +1,1 @@
+import AbstractView from"../AbstractView.js";import displayPage from"./display.html";export default class extends AbstractView{constructor(s){super(s),this.setTitle("Display")}script(){console.log("Display page load success")}async getHtml(){return displayPage}}
