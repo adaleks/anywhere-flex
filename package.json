@@ -1,6 +1,6 @@
 {
     "name": "anywhere-flex",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "AnywhereFlex is a lightweight responsive CSS utility library to accompany Anywhere UI libraries and static webpages as well.",
     "main": "app.js",
     "author": "AdaleksTech",
