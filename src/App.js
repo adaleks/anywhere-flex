@@ -14,6 +14,16 @@ import overflow from './pages/layout/overflow.js';
 import position from './pages/layout/position.js';
 import toprightbottomleft from './pages/layout/toprightbottomleft.js';
 import zindex from './pages/layout/zindex.js';
+import flexdirection from './pages/flexbox/flexdirection.js';
+import flexwrap from './pages/flexbox/flexwrap.js';
+import flex from './pages/flexbox/flex.js';
+import flexgrow from './pages/flexbox/flexgrow.js';
+import flexshrink from './pages/flexbox/flexshrink.js';
+import order from './pages/flexbox/order.js';
+import justifycontent from './pages/flexbox/justifycontent.js';
+import aligncontent from './pages/flexbox/aligncontent.js';
+import alignitems from './pages/flexbox/alignitems.js';
+import alignself from './pages/flexbox/alignself.js';
 
 const pathToRegex = (path) =>
     new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
@@ -98,6 +108,46 @@ const router = () => {
         {
             path: '/zindex',
             view: zindex,
+        },
+        {
+            path: '/flexdirection',
+            view: flexdirection,
+        },
+        {
+            path: '/flexwrap',
+            view: flexwrap,
+        },
+        {
+            path: '/flex-home',
+            view: flex,
+        },
+        {
+            path: '/flexgrow',
+            view: flexgrow,
+        },
+        {
+            path: '/flexshrink',
+            view: flexshrink,
+        },
+        {
+            path: '/order',
+            view: order,
+        },
+        {
+            path: '/justifycontent',
+            view: justifycontent,
+        },
+        {
+            path: '/aligncontent',
+            view: aligncontent,
+        },
+        {
+            path: '/alignitems',
+            view: alignitems,
+        },
+        {
+            path: '/alignself',
+            view: alignself,
         },
     ];
 
