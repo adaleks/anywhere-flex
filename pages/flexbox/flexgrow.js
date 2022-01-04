@@ -1,0 +1,1 @@
+import AbstractView from"../AbstractView.js";import flexgrowPage from"./flexgrow.html";export default class extends AbstractView{constructor(e){super(e),this.setTitle("Flex Grow")}script(){console.log("Flex Grow page load success")}async getHtml(){return flexgrowPage}}
