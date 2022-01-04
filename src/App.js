@@ -35,6 +35,13 @@ const getParams = (match) => {
     return Object.fromEntries(keys.map((key, i) => [key, values[i]]));
 };
 
+const hasClass = (element, className) => {
+    if (element) {
+        if (element.classList) return element.classList.contains(className);
+        else return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
+    }
+};
+
 const navigateTo = (url) => {
     history.pushState(null, null, url);
     router();
@@ -57,13 +64,13 @@ const removeClass = (element, className) => {
 
 const hideMenu = () => {
     removeClass(document.body, 'blocked-scroll');
-    removeClass(document.querySelector('.layout-sidebar'), 'active');
+    removeClass(document.querySelector('.layout-menu-wrapper'), 'active');
     removeClass(document.querySelector('.layout-mask'), 'layout-mask-active');
 };
 
 const onMenuButtonClick = () => {
     addClass(document.body, 'blocked-scroll');
-    addClass(document.querySelector('.layout-sidebar'), 'active');
+    addClass(document.querySelector('.layout-menu-wrapper'), 'active');
     addClass(document.querySelector('.layout-mask'), 'layout-mask-active');
 };
 const router = () => {
@@ -207,23 +214,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // const logoImage = document.createElement('img');
-    // logoImage.src = '/assets/logo.png';
-    // const logos = document.querySelectorAll('.logo');
-    // [].forEach.call(logos, function (logo) {
-    //     // do whatever
-    //     logo.querySelector('div').prepend(logoImage);
-    // });
+    let menuButton = document.querySelector('.mobile-button');
+    menuButton.onclick = function () {
+        const menuWrapper = document.querySelector('.layout-menu-wrapper');
+        if (hasClass(menuWrapper, 'active')) {
+            hideMenu();
+        } else {
+            onMenuButtonClick();
+        }
+    };
 
-    // let menuButton = document.querySelector('.menu-button');
-    // menuButton.onclick = function () {
-    //     onMenuButtonClick();
-    // };
-
-    // let mask = document.querySelector('.layout-mask');
-    // mask.onclick = function () {
-    //     hideMenu();
-    // };
+    let mask = document.querySelector('.layout-mask');
+    mask.onclick = function () {
+        hideMenu();
+    };
 
     router();
 });

@@ -18,7 +18,7 @@
         .mobile-button {
             display: block;
             color: var(--text-color);
-            font-size: 2rem;
+            font-size: 1.5rem;
             padding: 0.75rem;
             cursor: pointer;
             @include transition(color 0.2s);
@@ -31,7 +31,7 @@
         .mobile-search-button {
             display: block;
             padding: 0.25rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             text-decoration: none;
             background: var(--surface-card);
