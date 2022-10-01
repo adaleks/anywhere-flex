@@ -7,23 +7,23 @@ AnywhereFlex is a lightweight responsive CSS utility library to accompany Anywhe
 ### Module Loader
 
 ```bash
-npm install anywhere-flex
+npm install @anywhere-ui/flex
 ```
 
 After installation you may include the library by importing from node_modules.
 
 ```bash
-/node_modules/anywhere-flex/anywhere-flex.css
+/node_modules/@anywhere-ui/flex/anywhere-flex.css
 ```
 
 ### Load from CDN
 
 ```html
-<link href="https://unpkg.com/anywhere-flex@latest/anywhere-flex.css" rel="stylesheet" />
+<link href="https://unpkg.com/@anywhere-ui/flex@latest/anywhere-flex.css" rel="stylesheet" />
 ```
 
 ## Themes
 
 ```html
-<link href="https://unpkg.com/anywhere-flex@latest/themes/any-blue.css" rel="stylesheet" />
+<link href="https://unpkg.com/@anywhere-ui/flex@latest/themes/any-blue.css" rel="stylesheet" />
 ```
